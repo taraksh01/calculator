@@ -1,6 +1,12 @@
-const firstNumber = 4;
-const secondNumber = 6;
-const operator = "subtract";
+// const firstNumber = 4;
+// const secondNumber = 6;
+// const operator = "subtract";
+let expression = document.querySelector(".expression");
+
+const clear = document.querySelector(".clear");
+clear.addEventListener("click", () => {
+  expression.textContent = "";
+});
 
 function operate(firstNumber, operator, secondNumber) {
   switch (operator) {
@@ -25,7 +31,7 @@ function operate(firstNumber, operator, secondNumber) {
   }
 }
 
-console.log(operate(firstNumber, operator, secondNumber));
+// console.log(operate(firstNumber, operator, secondNumber));
 
 function add(num1, num2) {
   return num1 + num2;
