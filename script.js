@@ -1,7 +1,14 @@
 // const firstNumber = 4;
 // const secondNumber = 6;
 // const operator = "subtract";
-let expression = document.querySelector(".expression");
+const expression = document.querySelector(".expression");
+
+const buttons = Array.from(document.querySelectorAll("button"));
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    expression.textContent += button.textContent;
+  });
+});
 
 const clear = document.querySelector(".clear");
 clear.addEventListener("click", () => {
