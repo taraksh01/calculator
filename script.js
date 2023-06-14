@@ -11,7 +11,7 @@ const operatorsSymbol = {
 };
 
 const expression = document.querySelector(".expression");
-
+const answer = document.querySelector(".answer");
 const operators = Array.from(document.querySelectorAll(".operator"));
 operators.forEach((item) => {
   item.addEventListener("click", () => {
@@ -21,6 +21,16 @@ operators.forEach((item) => {
 });
 
 console.log(firstNumber, operator, secondNumber);
+
+const euqals = document.querySelector(".equals");
+euqals.addEventListener("click", () => {
+  [firstNumber, secondNumber] = expression.textContent.split(operator);
+  answer.textContent = operate(
+    firstNumber,
+    operatorsSymbol[operator],
+    secondNumber
+  );
+});
 
 const buttons = Array.from(document.querySelectorAll("button"));
 buttons.forEach((button) => {
