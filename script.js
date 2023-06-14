@@ -1,3 +1,32 @@
+const firstNumber = 4;
+const secondNumber = 6;
+const operator = "subtract";
+
+function operate(firstNumber, operator, secondNumber) {
+  switch (operator) {
+    case "add":
+      return add(firstNumber, secondNumber);
+      break;
+    case "subtract":
+      return subtract(firstNumber, secondNumber);
+      break;
+    case "multiply":
+      return multiply(firstNumber, secondNumber);
+      break;
+    case "divide":
+      return divide(firstNumber, secondNumber);
+      break;
+    case "remainder":
+      return remainder(firstNumber, secondNumber);
+      break;
+    case "power":
+      return power(firstNumber, secondNumber);
+      break;
+  }
+}
+
+console.log(operate(firstNumber, operator, secondNumber));
+
 function add(num1, num2) {
   return num1 + num2;
 }
