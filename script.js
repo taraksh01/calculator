@@ -1,13 +1,22 @@
 let firstNumber = 4;
 let secondNumber = 6;
 let operator = "subtract";
+const operatorsSymbol = {
+  "+": "add",
+  "-": "subtract",
+  X: "multiply",
+  "/": "divide",
+  "%": "remainder",
+  "^": "power",
+};
+
 const expression = document.querySelector(".expression");
 
 const operators = Array.from(document.querySelectorAll(".operator"));
 operators.forEach((item) => {
   item.addEventListener("click", () => {
     firstNumber = expression.textContent;
-    operator = item.classList[0];
+    operator = item.textContent;
   });
 });
 
