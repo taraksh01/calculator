@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightslategray;
+}
+
+h1 {
+  text-align: center;
+}
+
+.calculator {
+  height: 500px;
+  width: 340px;
+  border: 2px solid lightcoral;
+  margin: 20px auto;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: lightsteelblue;
+  flex-wrap: wrap;
+}
